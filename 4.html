@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Média</title>
+</head>
+<body>
+    <h1>Calcular Média</h1>
+    <h2>Digite os numeros separados por vírgula</h2>
+  <input type="text" id="numeros" placeholder="Digite os números separados por vírgula">
+  <button onclick="calcular()">Calcular Média</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularMedia(numeros) {
+     
+      if (numeros.length === 0) {
+        return "O vetor está vazio";
+      }
+
+     
+      const soma = numeros.reduce((total, numero) => total + numero, 0);
+
+      
+      const media = soma / numeros.length;
+
+      return media;
+    }
+
+    function calcular() {
+      const numerosString = document.getElementById("numeros").value;
+      const numerosArray = numerosString.split(",").map(Number);
+      const media = calcularMedia(numerosArray);
+      document.getElementById("resultado").textContent = "A média é: " + media;
+    }
+  </script>
+</body>
+</html>

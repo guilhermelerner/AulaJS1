@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exibir Mensagem</title>
+</head>
+<body>
+    <h1> Exibir mensagem</h1>
+  <input type="text" id="letra" placeholder="Digite uma letra">
+
+  <button onclick="mostrarResultado()">Verificar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function exibirMensagem(letra) {
+
+        if (letra === "a") {
+        console.log("A");
+        } 
+
+        else if (letra === "b") {
+        console.log("B");
+        }
+
+        else {
+        console.log("Outra letra");
+        }
+}
+
+    function mostrarResultado() {
+      // Obtém o valor digitado pelo usuário
+      const letra = document.getElementById("letra").value;
+
+      // Chama a função para exibir a mensagem
+      exibirMensagem(letra);
+    }
+  </script>
+</body>
+</html>

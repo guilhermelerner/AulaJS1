@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos Elementos de uma Matriz</title>
+    <script>
+        function calcularMediaMatriz() {
+            const matriz = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+            ];
+
+            let soma = 0;
+            let quantidadeElementos = 0;
+
+            for (let i = 0; i < matriz.length; i++) {
+                for (let j = 0; j < matriz[i].length; j++) {
+                    soma += matriz[i][j];
+                    quantidadeElementos++;
+                }
+            }
+
+            const media = soma / quantidadeElementos;
+
+            document.getElementById("resultado").innerText = "A média dos elementos da matriz é: " + media.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Média dos Elementos de uma Matriz</h1>
+    
+    <button onclick="calcularMediaMatriz()">Calcular Média</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

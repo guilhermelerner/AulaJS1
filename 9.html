@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número de um Vetor</title>
+    <script>
+        function encontrarMaiorNumero() {
+            const vetor = [10, 25, 30, 5, 60, 12];
+
+            const maiorNumero = Math.max(...vetor);
+
+            document.getElementById("resultado").innerText = "O maior número do vetor é: " + maiorNumero;
+        }
+    </script>
+</head>
+<body>
+    <h1>Maior Número de um Vetor</h1>
+    
+    <button onclick="encontrarMaiorNumero()">Encontrar Maior Número</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

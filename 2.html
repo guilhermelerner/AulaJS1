@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encontrar o Maior Número</title>
+</head>
+<body>
+  <h1>Descubra o maior número!</h1>
+
+  <label for="num1">Digite o primeiro número:</label>
+  <input type="number" id="num1" name="num1">
+
+  <label for="num2">Digite o segundo número:</label>
+  <input type="number" id="num2" name="num2">   
+
+
+  <button onclick="encontrarMaior()">Verificar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function encontrarMaior() {
+
+      const numero1 = parseFloat(document.getElementById("num1").value);
+      const numero2 = parseFloat(document.getElementById("num2").value);   
+
+      if (numero1 > numero2) {
+        document.getElementById("resultado").textContent = `O maior número é: ${numero1}`;
+      } else if (numero2 > numero1) {
+        document.getElementById("resultado").textContent = `O maior número é: ${numero2}`;
+      } else {
+        document.getElementById("resultado").textContent = "Os números são iguais!";
+      }
+    }
+  </script>
+</body>
+</html>
